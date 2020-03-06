@@ -15,26 +15,26 @@ let timer
 
 const updateTimer=()=>{
     sec++
-    const countElement=document.querySelector('#timer')
+    const countElement=document.querySelector('#seq')
     countElement.innerText= '秒数: '+sec
 }
 
 const setTimer=()=>{
     timer=setInterval(updateTimer,1000)
-    document.getElementById('setTimer').disable=true
+    document.getElementById('setTimer').disabled=true
 }
 
 const stopTimer=()=>{
     clearInterval(timer)
-    const countElement=document.querySelector('#timer')
+    const countElement=document.querySelector('#seq')
     countElement.innerText= '秒数: '+sec
-    document.getElementById('setTimer').disable=false
+    document.getElementById('setTimer').disabled=false
 }
 
 const clearTimer=()=>{
     clearInterval(timer)
     sec=0
-    const countElement=document.querySelector('#timer')
+    const countElement=document.querySelector('#seq')
     countElement.innerText= '秒数: '+sec
-    document.getElementById('setTimer').disable=false
+    document.getElementById('setTimer').disabled=false
 }

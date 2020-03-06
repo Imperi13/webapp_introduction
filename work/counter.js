@@ -21,12 +21,14 @@ const updateTimer=()=>{
 
 const setTimer=()=>{
     timer=setInterval(updateTimer,1000)
+    document.getElementById('setTimer').disable=true
 }
 
 const stopTimer=()=>{
     clearInterval(timer)
     const countElement=document.querySelector('#timer')
     countElement.innerText= '秒数: '+sec
+    document.getElementById('setTimer').disable=false
 }
 
 const clearTimer=()=>{
@@ -34,4 +36,5 @@ const clearTimer=()=>{
     sec=0
     const countElement=document.querySelector('#timer')
     countElement.innerText= '秒数: '+sec
+    document.getElementById('setTimer').disable=false
 }
